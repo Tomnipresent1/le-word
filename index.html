@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121213" media="(prefers-color-scheme: dark)">
+<title>Le-Word</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="side" id="round"></div>
+    <h1>Le-Word</h1>
+    <div class="side right">
+      <button id="statsBtn" class="iconBtn" type="button" aria-label="Statistics">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 20h3V10H4v10zm6.5 0h3V4h-3v16zM17 20h3v-7h-3v7z"/></svg>
+      </button>
+    </div>
+  </header>
+  <main>
+    <div id="boardWrap"><div id="board"></div></div>
+    <div id="keyboard"></div>
+    <div id="endCard" hidden>
+      <h2 id="endTitle"></h2>
+      <p id="endLine"></p>
+      <p id="endNote" hidden></p>
+      <p id="endStats" hidden></p>
+      <div class="endButtons">
+        <button id="shareBtn" class="btn ghost" type="button">Share</button>
+        <button id="nextBtn" class="btn primary" type="button"></button>
+      </div>
+    </div>
+  </main>
+  <div id="stats" class="overlay" hidden>
+    <div class="sheet" role="dialog" aria-label="Statistics">
+      <button id="statsClose" class="close" type="button" aria-label="Close">✕</button>
+      <h2>Statistics</h2>
+      <div class="nums">
+        <div><b id="sPlayed"></b><span>Played</span></div>
+        <div><b id="sWin"></b><span>Win %</span></div>
+        <div><b id="sStreak"></b><span>Current streak</span></div>
+        <div><b id="sBest"></b><span>Best streak</span></div>
+      </div>
+      <h3>Guesses</h3>
+      <div id="dist"></div>
+      <button id="statsShare" class="btn ghost" type="button">Share</button>
+      <div class="build" id="build"></div>
+    </div>
+  </div>
+  <div id="toast" role="status"></div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

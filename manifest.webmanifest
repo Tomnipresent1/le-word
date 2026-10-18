@@ -1,0 +1,8 @@
+{
+  "name": "Le-Word", "short_name": "Le-Word", "description": "A five-letter word game, one round after another.",
+  "start_url": "./index.html", "scope": "./", "display": "standalone", "orientation": "any",
+  "background_color": "#ffffff", "theme_color": "#ffffff",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
